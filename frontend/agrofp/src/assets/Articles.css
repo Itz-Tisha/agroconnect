@@ -1,0 +1,41 @@
+/* Articles.css */
+
+.articles-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  align-items: center;
+}
+
+.article-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px; /* Card will never be wider than 800px */
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  text-align: left;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+}

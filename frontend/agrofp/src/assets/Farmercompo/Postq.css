@@ -1,0 +1,63 @@
+/* Postq.css */
+
+.postq-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.postq-container h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.postq-container input[type="text"],
+.postq-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.postq-container input[type="text"]:focus,
+.postq-container textarea:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+.postq-container textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.postq-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.postq-container button:hover {
+  background-color: #2e7d32;
+}
+
+.error-msg {
+  text-align: center;
+  color: #d32f2f;
+  margin-top: 15px;
+  font-weight: 500;
+}

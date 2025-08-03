@@ -1,0 +1,58 @@
+/* Displayq.css */
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.question-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #4CAF50;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.question-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.question-content {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-answer,
+.btn-view {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-view {
+  background-color: #2196F3;
+}
+
+.btn-answer:hover {
+  background-color: #45a049;
+}
+
+.btn-view:hover {
+  background-color: #1e88e5;
+}
