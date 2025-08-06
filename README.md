@@ -1,4 +1,5 @@
 🌱 AgroConnect
+
 AgroConnect is a web-based platform aimed at bridging the gap between farmers and agricultural experts. It provides a collaborative space where farmers can post agricultural queries, and experts can respond with valuable guidance and solutions.
 
 🚧 Note: This project is currently under active development. New features and improvements are being added regularly.
