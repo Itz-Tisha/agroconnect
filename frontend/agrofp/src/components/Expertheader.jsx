@@ -52,10 +52,10 @@ const Expertheader = () => {
               {islogin ? (
                 <>
                    <Link to="/displayq">Answered</Link>
-     <Link to="/userprofile">Profile</Link>
-       <Link to="/postart">Post Articles</Link>
-       <Link to="/articles">View Articles</Link>
-       <button className="logout-btn" onClick={logout}>Logout</button>
+                  <Link to="/postart">Post Articles</Link>
+                  <Link to="/articles">View Articles</Link>
+                  <Link to="/userprofile">Profile</Link>
+                  <button className="logout-btn" onClick={logout}>Logout</button>
                 </>
                 
               ) : (

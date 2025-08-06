@@ -32,6 +32,15 @@
   text-align: left;
 }
 
+
+.article-content {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  text-align: left;
+}
+
 .error-message {
   color: #e74c3c;
   font-weight: 500;

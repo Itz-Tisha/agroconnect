@@ -3,12 +3,17 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/Displayq.css'; 
-
+import Farmerheader from './Farmerheader';
 import Expertheader from './Expertheader';
 const Displayq = () => {
+   const storedUsertype = localStorage.getItem('usertype');
 const navigate = useNavigate()
   const [questions, setquestions] = useState([])
+  const [usertype, setusertype] = useState('');
   useEffect(()=>{
+  if (storedUsertype) {
+    setusertype(storedUsertype);
+  }
   axios.get('http://localhost:9579/displayq').then((res)=>{
     if(res.status == 200){
       for(let i=0;i<res.data.questions.length;i++){
@@ -26,13 +31,18 @@ const navigate = useNavigate()
   navigate('/Answerq', { state: { post: q.user, user: q._id } });
   }
   function viewansfunc(q){
-    console.log("jgbvjhbvhjbv")
-    console.log(q._id);
+    console.log("hiiii")
+    console.log(q);
     navigate('/viewans',{state:{questionId:q._id}});
   }
   return (
   <>
-  <Expertheader />
+  {usertype === 'expert' ? (
+    <Expertheader />
+  ) : (
+    <Farmerheader />
+  )}
+ 
   <div className="container">
     {questions.map((q, ind) => (
       <div className="question-card" key={ind}>
@@ -40,7 +50,10 @@ const navigate = useNavigate()
         <p className="question-title">Title: {q.title}</p>
         <p className="question-content">Question: {q.content}</p>
         <div className="btn-group">
+        {usertype === 'expert' && (
           <button className="btn-answer" onClick={() => AnswerQuest(q)}>Answer the question</button>
+        )}
+          
           <button className="btn-view" onClick={() => viewansfunc(q)}>View answer</button>
         </div>
       </div>

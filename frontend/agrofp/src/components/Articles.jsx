@@ -50,6 +50,9 @@ const Articles = () => {
             </div>
             <div className="article-content">
               <h3 className="article-title">{art.title}</h3>
+              <p className="article-content">{art.content}</p>
+              <button>comments</button>
+              <button>like</button>
              <p className="article-author">Posted by <strong>{art.user?.name || 'Unknown'}</strong></p>
           
             </div>

@@ -46,7 +46,7 @@ const Home = () => {
         {islogin && (
           <div className="user-info">
             <p>Hello, {user ? user.name : 'User'}!</p>
-            <p>Your user type is: {usertype}</p>
+          
             {/* {isfarmer ? (
               <button onClick={goToFarmerPage}>Go to Farmer Page</button>
             ) : (

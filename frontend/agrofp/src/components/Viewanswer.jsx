@@ -19,7 +19,8 @@ const Viewanswer = () => {
   }
 
   const form = { questionId: location.state.questionId };
-  console.log(form); 
+  console.log("hello from this")
+  console.log(form.questionId); 
   axios.post('http://localhost:9579/viewans', form)
     .then((res) => {
       if (res.status === 200) {

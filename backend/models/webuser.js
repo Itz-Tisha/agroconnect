@@ -9,7 +9,17 @@ const user = new mongo.Schema({
     enum: ['farmer', 'expert'], 
     default: 'farmer'
   },
-    image:{type:String ,required:true, trim:true},
+    //image:{type:String ,required:true, trim:true},
 })
+user.pre('remove', async function (next) {
+    const userId = this._id;
+    await mongo.model('Post').deleteMany({ user: userId });
+    await mongo.model('Solution').deleteMany({ user: userId });
+    await mongo.model('Articles').deleteMany({ user: userId });
+    await mongo.model('Chat').deleteMany({ 
+        $or: [{ user: userId }, { expuser: userId }]
+    });
+    next();
+});
 
 module.exports = mongo.model('Webuser',user);

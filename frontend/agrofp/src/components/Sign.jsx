@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import '../assets/Sign.css' // 👈 Import the CSS file
-
+import { Link } from 'react-router-dom'
 const Sign = () => {
   const navigate = useNavigate()
   const [name, setname] = useState('')
@@ -69,7 +69,7 @@ const Sign = () => {
         </select>
 
         <button type="submit">Sign Up</button>
-
+        <p>Already have an account? <Link to='/login'>Login</Link></p>
         {error && <p>{error}</p>}
       </form>
     </div>

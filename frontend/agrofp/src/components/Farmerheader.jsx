@@ -50,10 +50,12 @@ const Farmerheader = () => {
         {islogin ? (
           <>
              <Link to="/Postq">Post Doubts</Link>  
-     <Link to="/userprofile">Profile</Link>
+    
       <Link to="/articles">View Articles</Link>
-      <Link to="/TalkwithExpert">talk with an experts</Link>
+      {/* <Link to="/TalkwithExpert">talk with an experts</Link> */}
+      <Link to="/displayq">Solutions</Link>
        <Link to="/viewweather">View weather</Link>
+        <Link to="/userprofile">Profile</Link>
       <button className="logout-btn" onClick={logout}>Logout</button>
           </>
           

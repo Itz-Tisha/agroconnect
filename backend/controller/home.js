@@ -248,6 +248,7 @@ exports.answerq = (req,res,next)=>{
 
 exports.viewans = (req,res,next)=>{
   const {questionId} = req.body;
+  console.log("reached at viewans");
   console.log(questionId);
   Solution.find({ post: questionId }).then((ans)=>{
     console.log(ans);
