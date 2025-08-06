@@ -5,6 +5,7 @@ AgroConnect is a web-based platform aimed at bridging the gap between farmers an
 🚧 Note: This project is currently under active development. New features and improvements are being added regularly.
 
 🧩 Features (Planned & In Progress)
+
 👨‍🌾 Farmer Interface
 
  Post questions with descriptions and images
@@ -42,6 +43,7 @@ Database: MongoDB with Mongoose
 
 Authentication: JWT & bcrypt
 
+
 🚀 Getting Started
 bash
 Copy
@@ -57,6 +59,7 @@ npm install
 
 # Run the server
 node app.js
+
 📌 To-Do List
  Complete expert dashboard
 
